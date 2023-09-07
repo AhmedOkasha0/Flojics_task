@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-class MoviesShow extends Equatable {
+class Movies extends Equatable {
   final int id;
   final String title;
   final String coverUrl;
@@ -8,7 +8,7 @@ class MoviesShow extends Equatable {
   final int season;
   final String directedBy;
 
-  const MoviesShow({
+  const Movies({
     required this.id,
     required this.title,
     required this.coverUrl,
