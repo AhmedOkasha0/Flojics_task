@@ -8,5 +8,6 @@ class AppRouter {
       case AppStrings.intialRoute:
       return MaterialPageRoute(builder: (context) => const HomeScreen());
     }
+    return null;
   }
 }
