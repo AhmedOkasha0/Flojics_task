@@ -1,6 +1,6 @@
-import 'package:flojics_task/authentication/domian/entites/authentication.dart';
+import 'package:flojics_task/authentication/domian/entites/user.dart';
 
-class UserModel extends Authentication {
+class UserModel extends AuthUser {
   const UserModel({
     required super.name,
     required super.emailAdress,

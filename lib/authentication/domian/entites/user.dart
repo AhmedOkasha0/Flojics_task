@@ -1,11 +1,11 @@
 import 'package:equatable/equatable.dart';
 
-class Authentication extends Equatable {
+class AuthUser extends Equatable {
   final String name;
   final String emailAdress;
   final String password;
 
-  const Authentication({
+  const AuthUser({
     required this.name,
     required this.emailAdress,
     required this.password,
