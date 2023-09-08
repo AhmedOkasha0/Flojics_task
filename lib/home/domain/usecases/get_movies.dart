@@ -7,7 +7,7 @@ class GetMoviesUseCase {
   final BaseHomeReqpository homeReqpository;
 
   GetMoviesUseCase({required this.homeReqpository});
-  Future<Either<Failuer, List<Movies>>> call() async {
+  Future<Either<Faulier, List<Movies>>> call() async {
     return await homeReqpository.getMovies();
   }
 }

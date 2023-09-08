@@ -1,17 +1,17 @@
 import 'package:equatable/equatable.dart';
 
-abstract class Failuer extends Equatable {
+abstract class Faulier extends Equatable {
   final String message;
 
-  const Failuer(this.message);
+  const Faulier(this.message);
   @override
   List<Object> get props => [message];
 }
 
-class SereverFailuer extends Failuer {
+class SereverFailuer extends Faulier {
   const SereverFailuer(super.message);
 }
 
-class DataBaseFailuer extends Failuer {
+class DataBaseFailuer extends Faulier {
   const DataBaseFailuer(super.message);
 }
