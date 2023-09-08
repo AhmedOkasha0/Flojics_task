@@ -17,7 +17,7 @@ class HomeLoaded extends HomeState {
   const HomeLoaded({required this.moviesList});
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [moviesList];
 }
 
 class HomeErrorMessage extends HomeState {

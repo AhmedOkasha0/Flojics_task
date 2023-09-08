@@ -15,3 +15,7 @@ class SereverFailuer extends Faulier {
 class DataBaseFailuer extends Faulier {
   const DataBaseFailuer(super.message);
 }
+
+class CachFaulier extends Faulier {
+  const CachFaulier(super.message);
+}
