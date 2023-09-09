@@ -9,12 +9,12 @@ class LoginRequest extends Equatable {
   List<Object?> get props => [emailAdress, password];
 }
 
-class SignupRequest extends Equatable{
+class SignupRequest extends Equatable {
   final String name;
   final String emailAdress;
   final String password;
   const SignupRequest(this.emailAdress, this.password, this.name);
-  
+
   @override
-  List<Object?> get props =>  [name,password,emailAdress]
+  List<Object?> get props => [name, password, emailAdress];
 }
