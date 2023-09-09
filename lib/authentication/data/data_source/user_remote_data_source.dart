@@ -28,4 +28,6 @@ class UserRemoteDataSource extends BaseRemoteDataSourceUser {
     await firebaseAuth.createUserWithEmailAndPassword(
         email: user.emailAdress, password: user.password);
   }
+  
+  
 }

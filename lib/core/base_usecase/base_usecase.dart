@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flojics_task/core/fauiler/faulier.dart';
 
 abstract class BaseUseCase<T, Parameter> {
-  Future<Either<Faulier, List<T>>> call(Parameter parameter);
+  Future<Either<Faulier, T>> call(Parameter parameter);
 }
 
 class NoParameter extends Equatable {

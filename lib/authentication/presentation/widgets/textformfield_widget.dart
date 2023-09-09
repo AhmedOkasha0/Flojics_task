@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextFormContanier extends StatelessWidget {
   final bool isObscureText;
   final TextInputType keyboardType;
   final TextEditingController? controller;
-  final String hintText;
-  final IconData prefixIcon;
 
-  const TextFormContanier(
-      {super.key,
-      required this.isObscureText,
-      required this.keyboardType,
-      this.controller,
-      required this.hintText,
-      required this.prefixIcon});
+  const TextFormContanier({
+    super.key,
+    required this.isObscureText,
+    required this.keyboardType,
+    this.controller,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +20,11 @@ class TextFormContanier extends StatelessWidget {
       keyboardType: keyboardType,
       controller: controller,
       decoration: InputDecoration(
-        prefixIcon: Icon(prefixIcon),
-        hintText: hintText,
-      ),
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(11.w),
+              borderSide: const BorderSide(
+                color: Colors.grey,
+              ))),
     );
   }
 }
