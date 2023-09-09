@@ -16,4 +16,13 @@ class StringsStyle {
     fontSize: 22,
     color: Colors.black,
   );
+  static const textStyle14 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 14,
+  );
+  static const textStyle16 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    color: Colors.black,
+  );
 }

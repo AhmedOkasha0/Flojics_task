@@ -1,3 +1,8 @@
+import 'package:flojics_task/authentication/data/data_source/user_remote_data_source.dart';
+import 'package:flojics_task/authentication/data/repository/auth_repository.dart';
+import 'package:flojics_task/authentication/domian/repository/auth_repository.dart';
+import 'package:flojics_task/authentication/domian/usecases/login_usecase.dart';
+import 'package:flojics_task/authentication/domian/usecases/signup_usecase.dart';
 import 'package:flojics_task/home/data/data_source/movies_remote_data_source.dart';
 import 'package:flojics_task/home/data/repository/home_repository.dart';
 import 'package:flojics_task/home/domain/repository/home_repository.dart';
@@ -12,13 +17,18 @@ class ServiceLocator {
     // repository
     sl.registerLazySingleton<BaseHomeReqpository>(
         () => HomeRepositoryImpl(moviesRemoteDataSource: sl()));
+    sl.registerLazySingleton<AuthRepository>(() => AuthRepositoryImbl(sl()));
 
     // remote data source
     sl.registerLazySingleton<BaseMoviesRemoteDataSource>(
         () => MoviesDataSource(baseMoviesRemoteDataSource: sl()));
+    sl.registerLazySingleton<FirebaseAuthDatasource>(
+        () => UserRemoteDataSource(firebaseAuth: sl()));
 
     // use cases
     sl.registerLazySingleton(() => GetMoviesUseCase(homeReqpository: sl()));
     sl.registerLazySingleton(() => GetTvShowsUseCase(homeReqpository: sl()));
+    sl.registerLazySingleton(() => LoginUseCase(authRepository: sl()));
+    sl.registerLazySingleton(() => SignUpUseCase(authRepository: sl()));
   }
 }

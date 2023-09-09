@@ -1,3 +1,4 @@
+import 'package:flojics_task/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,7 +24,7 @@ class TextFormContanier extends StatelessWidget {
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(11.w),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: AppColor.grey,
               ))),
     );
   }

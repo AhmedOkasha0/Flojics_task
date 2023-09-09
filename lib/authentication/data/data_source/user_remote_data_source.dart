@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flojics_task/core/network/requests.dart';
@@ -10,11 +9,9 @@ abstract class FirebaseAuthDatasource {
 
 class UserRemoteDataSource extends FirebaseAuthDatasource {
   final FirebaseAuth firebaseAuth;
-  final FirebaseFirestore firebaseFirestore;
 
   UserRemoteDataSource({
     required this.firebaseAuth,
-    required this.firebaseFirestore,
   });
   static final FirebaseAuth auth = FirebaseAuth.instance;
 

@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:dartz/dartz.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flojics_task/authentication/data/data_source/user_remote_data_source.dart';
 import 'package:flojics_task/authentication/domian/repository/auth_repository.dart';
 import 'package:flojics_task/core/error/exceptions.dart';

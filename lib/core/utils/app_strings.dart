@@ -9,4 +9,11 @@ class AppStrings {
   static const String enterYourCredentials =
       "Enter your credentials to access your account";
   static const String name = "Name";
+  static const String emailAdress = "Email address";
+  static const String password = "Password";
+  static const String iAgreeTo = "I agree to the ";
+  static const String termsPrivacy = " Terms & Privacy";
+  static const String signUp = "sign up";
+  static const String iHaveAccount = "Already have an account?";
+  static const String login = "Login";
 }
