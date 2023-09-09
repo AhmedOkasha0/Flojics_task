@@ -16,4 +16,8 @@ class AppStrings {
   static const String signUp = "sign up";
   static const String iHaveAccount = "Already have an account?";
   static const String login = "Login";
+  static const String loginScreenRoute = "loginRoute";
+  static const String connectWithUs = "Let’s Connect With Us!";
+  static const String forgetPassword = "Forgot password?";
+  static const String haveNotAccount = "Don't have an account?";
 }

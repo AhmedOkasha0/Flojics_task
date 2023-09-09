@@ -1,3 +1,4 @@
+import 'package:flojics_task/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
 
 class StringsStyle {
@@ -24,5 +25,14 @@ class StringsStyle {
     fontWeight: FontWeight.w400,
     fontSize: 16,
     color: Colors.black,
+  );
+  static const textStyle24 = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 24,
+    color: AppColor.blackBlu,
+  );
+  static const textStyle17 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 14,
   );
 }
