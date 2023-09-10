@@ -5,16 +5,14 @@ class MoviesModel extends Movies {
     required super.id,
     required super.title,
     required super.coverUrl,
-    required super.relaseData,
     required super.season,
     required super.directedBy,
   });
 
   factory MoviesModel.fromJson(Map<String, dynamic> json) => MoviesModel(
-      id: json["id"],
-      title: json["title"],
-      coverUrl: json["cover_url"],
-      relaseData: json["release_date"],
-      season: json["season"],
-      directedBy: json["directed_by"]);
+      coverUrl: json['cover_url'] ?? "",
+      directedBy: json['directed_by'] ?? "",
+      id: json['id'] ?? 0,
+      season: json['season'] ?? 0,
+      title: json['title'] ?? "",);
 }

@@ -4,7 +4,6 @@ class Movies extends Equatable {
   final int id;
   final String title;
   final String coverUrl;
-  final String relaseData;
   final int season;
   final String directedBy;
 
@@ -12,7 +11,6 @@ class Movies extends Equatable {
     required this.id,
     required this.title,
     required this.coverUrl,
-    required this.relaseData,
     required this.season,
     required this.directedBy,
   });
@@ -22,7 +20,6 @@ class Movies extends Equatable {
         id,
         title,
         coverUrl,
-        relaseData,
         season,
       ];
 }

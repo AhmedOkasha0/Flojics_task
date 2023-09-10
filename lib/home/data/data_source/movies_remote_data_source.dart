@@ -10,16 +10,12 @@ abstract class BaseMoviesRemoteDataSource {
 }
 
 class MoviesDataSource extends BaseMoviesRemoteDataSource {
-  final BaseMoviesRemoteDataSource baseMoviesRemoteDataSource;
-
-  MoviesDataSource({required this.baseMoviesRemoteDataSource});
-
   @override
   Future<List<MoviesModel>> getMovies() async {
-    final respose = await Dio().get(ApiConstants.moviesEndPoint);
+    final respose = await Dio().get("https://mcuapi.herokuapp.com/api/v1/movies");
     if (respose.statusCode == 200) {
       return List<MoviesModel>.from(
-          (respose.data["dtat"] as List).map((e) => MoviesModel.fromJson(e)));
+          (respose.data["data"] as List).map((e) => MoviesModel.fromJson(e)));
     } else {
       throw ServerExeption(
           errorMessageModel: ErrorMessageModel.fromJson(respose.data));
@@ -28,7 +24,7 @@ class MoviesDataSource extends BaseMoviesRemoteDataSource {
 
   @override
   Future<List<MoviesModel>> getTvShows() async {
-    final respone = await Dio().get(ApiConstants.tvShowsEndPoint);
+    final respone = await Dio().get("https://mcuapi.herokuapp.com/api/v1/tvshows");
     if (respone.statusCode == 200) {
       return List<MoviesModel>.from(
           (respone.data["data"] as List).map((e) => MoviesModel.fromJson(e)));

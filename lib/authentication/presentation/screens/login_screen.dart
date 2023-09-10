@@ -68,7 +68,10 @@ class LoginScreen extends StatelessWidget {
                     height: 41.h,
                     width: 320.w,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(
+                            context, AppStrings.homeScreenRoute);
+                      },
                       child: Text(AppStrings.login,
                           style: StringsStyle.textStyle22.copyWith(
                               color: Colors.white,
