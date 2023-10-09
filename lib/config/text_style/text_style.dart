@@ -35,4 +35,5 @@ class StringsStyle {
     fontWeight: FontWeight.w400,
     fontSize: 14,
   );
+  
 }
